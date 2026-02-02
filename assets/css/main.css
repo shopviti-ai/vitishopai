@@ -236,3 +236,61 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-note { font-size: 0.9em; color: #888; margin-top: 15px; }
+/* --- TỐI ƯU GIAO DIỆN MOBILE --- */
+@media screen and (max-width: 768px) {
+    /* Ẩn menu ngang, biến thành menu dọc ẩn/hiện */
+    #horizontal-nav {
+        display: none; 
+        background: #b71c1c !important;
+    }
+
+    #horizontal-nav.active {
+        display: block;
+    }
+
+    #horizontal-nav ul {
+        flex-direction: column;
+    }
+
+    #horizontal-nav ul li a {
+        padding: 12px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Nút bấm Menu Mobile */
+    .mobile-only {
+        display: block !important;
+        background: #d32f2f;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Thu nhỏ banner và tiêu đề Neon */
+    .neon-header h2 {
+        font-size: 1.4em !important;
+    }
+
+    /* Chỉnh lại khối 4 cột thành 2 cột cho dễ nhìn */
+    .trust-container .inner {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px;
+    }
+
+    .trust-item {
+        border-right: none !important;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    /* Card sản phẩm chạy ngang: thu nhỏ lại một chút */
+    .marquee-content .p-card {
+        width: 220px;
+        margin-right: 15px;
+    }
+}
+
+/* Ẩn nút mobile trên desktop */
+.mobile-only { display: none; }
