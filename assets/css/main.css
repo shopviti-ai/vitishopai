@@ -45,27 +45,29 @@ h1, h2, h3, h4, h5, h6 {
 .copyright { text-align: center; padding-top: 2em; font-size: 0.9em; color: #666; }
 
 /* RESPONSIVE MOBILE */
-@media screen and (max-width: 736px) {
-    .trust-container .inner, .product-grid, .footer-grid { grid-template-columns: 1fr; }
-    #horizontal-nav ul { flex-direction: column; text-align: center; }
-}
-/* --- HIỆU ỨNG SẢN PHẨM CHẠY NGANG (MARQUEE) --- */
-.marquee-container {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-    position: relative;
-}
+/* --- CSS RIÊNG CHO MOBILE (Dưới 768px) --- */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 95% !important;
+        padding: 15px !important;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
 
-.marquee-content {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 30s linear infinite; /* Điều chỉnh thời gian để chạy nhanh hay chậm */
-}
+   
+    .qr-frame img, .qr-section img {
+        max-width: 100% !important;
+        height: auto !important;
+        border: 2px solid #6f4e37; /* Màu nâu thương hiệu Tín */
+        border-radius: 10px;
+    }
 
-/* Tạm dừng khi di chuột vào */
-.marquee-container:hover .marquee-content {
-    animation-play-state: paused;
+    
+    .zalo-btn-fixed, #btn-send-messenger {
+        width: 100% !important;
+        font-size: 16px !important;
+        padding: 15px !important;
+    }
 }
 
 @keyframes scroll-left {
@@ -73,11 +75,11 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%); /* Chạy hết một nửa danh sách rồi lặp lại */
+        transform: translateX(-50%); 
     }
 }
 
-/* Tinh chỉnh thẻ sản phẩm trong dải chạy */
+
 .marquee-content .p-card {
     width: 280px;
     margin-right: 30px;
@@ -102,7 +104,6 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     margin-bottom: 10px;
 }
-/* --- HIỆU ỨNG TIÊU ĐỀ NEON & ICON CHÍNH CHỦ --- */
 .neon-header {
     background: #0d1117; /* Nền tối để làm nổi bật ánh sáng neon */
     padding: 30px;
