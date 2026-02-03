@@ -228,28 +228,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* --- 8. TỐI ƯU GIAO DIỆN MOBILE --- */
+/* --- ĐẶC TRỊ LỖI MOBILE VĨNH TÍN AI --- */
 @media screen and (max-width: 768px) {
-    .trust-container .inner { grid-template-columns: repeat(2, 1fr) !important; }
-    .product-grid { grid-template-columns: repeat(1, 1fr) !important; }
-    
-    #horizontal-nav { display: none; }
-    #horizontal-nav.active { display: block; }
-    
-    .mobile-only {
-        display: block !important;
-        background: #d32f2f;
-        color: #fff;
-        padding: 10px 15px;
-        text-align: center;
-        font-weight: bold;
+    /* 1. Sửa lỗi Modal thanh toán bị hẹp và dài */
+    .modal-content {
+        width: 92% !important;
+        margin: 10px auto !important;
+        padding: 15px !important;
+        max-height: 85vh;
+        overflow-y: auto;
     }
 
-    .neon-header h2 { font-size: 1.4em !important; }
-    
-    .modal-content {
-        width: 95% !important;
-        padding: 20px !important;
+    /* 2. Sửa lỗi mã QR che khuất nội dung */
+    .qr-frame img, .qr-section img {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto;
     }
+
+    /* 3. Sửa lỗi thẻ sản phẩm bị xuống hàng lệch */
+    .product-card, .p-card {
+        width: 100% !important; /* Hoặc 48% nếu Tín muốn hiện 2 cột */
+        display: block !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 4. Nút MUA NGAY full chiều ngang cho dễ bấm */
+    .btn-buy-now, .btn-add {
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 16px !important;
+        text-align: center;
+    }
+}
 
     /* Đảm bảo nút Messenger/Zalo luôn dễ bấm trên mobile */
     #btn-send-messenger, .zalo-btn-fixed {
