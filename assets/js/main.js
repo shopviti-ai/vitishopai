@@ -1,38 +1,25 @@
 $(document).ready(function() {
-    /* --- 1. XỬ LÝ SỰ KIỆN MUA NGAY (HIỆN QR BANK) --- */
-    $(document).on('click', '.btn-mua-ngay', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        // Hiện cửa sổ Modal QR Ngân hàng
-        $('#qro-modal').css('display', 'flex').hide().fadeIn(300);
-        
-        console.log("Viti Shop AI: Đã kích hoạt hiện mã QR thanh toán");
-        return false;
+    // 1. Mở Modal khi nhấn Mua Ngay
+    $(document).on('click', '.btn-order', function() {
+        const name = $(this).data('name');
+        const price = $(this).data('price');
+        $('#order-details').html(`Đang chọn: <strong>${name}</strong> (${price})`);
+        $('#order-modal').fadeIn().css('display', 'flex');
     });
 
-    /* --- 2. XỬ LÝ ĐÓNG MODAL --- */
-    $(document).on('click', '.close-modal', function() {
-        $('#qro-modal').fadeOut(300);
-    });
+    // 2. Đóng Modal
+    $('.close-modal').on('click', function() { $('#order-modal').fadeOut(); });
 
-    $(window).on('click', function(event) {
-        if ($(event.target).is('#qro-modal')) {
-            $('#qro-modal').fadeOut(300);
-        }
-    });
+    // 3. Toggle Menu Mobile
+    $('#mobile-menu-btn').on('click', function() { $('.nav-links').toggleClass('active'); });
 
-    /* --- 3. XỬ LÝ MENU MOBILE --- */
-    $('#mobile-menu-btn').on('click', function(e) {
-        e.preventDefault();
-        $('#horizontal-nav').slideToggle(300);
-        $(this).toggleClass('active');
-    });
-
-    // Tự động đóng menu khi bấm vào link trên mobile
-    $('#main-menu a').on('click', function() {
-        if ($(window).width() <= 768) {
-            $('#horizontal-nav').slideUp(300);
-        }
+    // 4. Gửi Messenger
+    $('#btn-send-messenger').on('click', function() {
+        const info = $('#order-details').text();
+        const msg = `CHÀO VĨNH TÍN AI! TÔI MUỐN MUA:\n${info}\nVui lòng tư vấn giúp tôi!`;
+        navigator.clipboard.writeText(msg).then(() => {
+            alert("Đã sao chép nội dung đơn hàng!");
+            window.open("https://m.me/cafeep276", "_blank"); 
+        });
     });
 });
