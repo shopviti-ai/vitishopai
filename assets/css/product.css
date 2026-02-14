@@ -1,0 +1,84 @@
+/* --- CSS DÀNH RIÊNG CHO TRANG CHI TIẾT SẢN PHẨM  --- */
+
+.product-detail-container {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* KHỐNG CHẾ KÍCH THƯỚC ẢNH (Sửa lỗi image_200270.jpg) */
+.product-image-wrapper {
+    width: 100%;
+    max-width: 800px; /* Không cho ảnh dãn quá rộng */
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 2px solid #eee;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 450px; /* Chiều cao tối đa để không phải cuộn trang quá nhiều */
+    object-fit: cover;
+    display: block;
+}
+
+/* THÔNG TIN SẢN PHẨM */
+.product-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-title {
+    color: #d32f2f; /* Màu đỏ thương hiệu Vĩnh Tín */
+    font-size: 2.2em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.benefit-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.benefit-list li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+.benefit-list i {
+    color: #00ff95; /* Màu xanh của sự tin cậy */
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+/* NÚT TƯ VẤN NEON */
+.btn-consult {
+    background: #d32f2f !important;
+    color: #fff !important;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 900;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(211, 47, 47, 0.4);
+    transition: 0.3s;
+}
+
+.btn-consult:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #d32f2f;
+}
+
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .product-title { font-size: 1.6em; }
+    .product-image-wrapper img { max-height: 250px; }
+}
