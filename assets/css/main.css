@@ -1,138 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
-/* --- 1. RESET & CẤU HÌNH GỌN GÀNG --- */
-body { 
-    font-family: 'Inter', sans-serif !important; 
-    background: #fdfcf0; 
-    margin: 0; 
-    font-size: 16px; /* Giảm từ 18px xuống 16px để trang web tinh tế hơn [cite: 2026-02-03] */
-    color: #333; 
-}
-.inner { 
-    max-width: 1100px; /* Thu hẹp độ rộng toàn trang để không bị quá loãng [cite: 2026-02-03] */
-    margin: 0 auto; 
-    padding: 0 15px; 
-}
+body { font-family: 'Inter', sans-serif !important; background: #fdfcf0; margin: 0; font-size: 16px; overflow-x: hidden; }
+.inner { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
 
-/* --- 2. HEADER & MENU (FIX LỖI TÀNG HÌNH) --- */
-.top-bar { background: #fff; padding: 8px 0; border-bottom: 1px solid #eee; }
-.contact-header { font-weight: 700; color: #d32f2f; font-size: 0.9em; }
+/* --- HEADER & NAV --- */
+.top-bar { background: #fff; padding: 10px 0; text-align: center; border-bottom: 1px solid #eee; }
+.contact-header { font-weight: 700; color: #d32f2f; }
+#horizontal-nav { background: #d32f2f !important; position: sticky; top: 0; z-index: 1000; }
+.nav-links { display: flex; justify-content: center; list-style: none !important; margin: 0; padding: 0; }
+.nav-links a { color: #fff !important; padding: 15px 20px; display: block; text-decoration: none; font-weight: 700; font-size: 0.9em; }
 
-#horizontal-nav { 
-    background: #d32f2f !important; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1000; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-}
-.nav-links { 
-    display: flex; 
-    justify-content: center; 
-    list-style: none !important; 
-    margin: 0; 
-    padding: 0; 
-}
-.nav-links a { 
-    color: #fff !important; 
-    padding: 12px 20px; /* Giảm padding cho menu gọn hơn [cite: 2026-02-03] */
-    display: block; 
-    text-decoration: none !important; 
-    font-weight: 700; 
-    font-size: 0.85em;
-}
+/* --- FIX LỖI BANNER PHÓNG TO --- */
+.banner-wrapper { width: 100%; background: #000; overflow: hidden; line-height: 0; }
+.full-banner { width: 100%; height: 380px !important; object-fit: contain; display: block; }
 
-/* --- 3. FIX LỖI BANNER PHÓNG TO --- */
-.banner-wrapper { 
-    width: 100%; 
-    background: #000; 
-    overflow: hidden; 
-    line-height: 0; 
-}
-.full-banner { 
-    width: 100%; 
-    height: 380px !important; /* Khống chế chiều cao tối đa trên PC [cite: 2026-02-03] */
-    object-fit: cover; /* Giữ ảnh không bị méo nhưng không quá zoom [cite: 2026-02-03] */
-    display: block; 
-}
-
-/* --- 4. KHỐI TIN CẬY 4 CỘT --- */
-.trust-container .inner { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 15px; 
-    padding: 25px 0; /* Thu nhỏ khoảng cách padding [cite: 2026-02-03] */
-}
-.trust-item { text-align: center; border-right: 1px solid #eee; padding: 0 5px; }
+/* --- TRUST & PRODUCT GRID --- */
+.trust-container .inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; padding: 30px 0; }
+.trust-item { text-align: center; border-right: 1px solid #eee; }
 .trust-item:last-child { border: none; }
 .trust-item i { font-size: 2em; color: #d32f2f; margin-bottom: 8px; }
-.trust-item h4 { font-size: 0.9em; margin: 5px 0; }
-.trust-item p { font-size: 0.75em; color: #666; }
 
-/* --- 5. LƯỚI SẢN PHẨM (FIX LỖI PHÓNG TO CARD) --- */
-.product-grid { 
-    display: grid; 
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 20px; 
-    margin-top: 20px; 
-}
-.p-card { 
-    background: #fff; 
-    padding: 15px; 
-    border-radius: 12px; 
-    text-align: center; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-    border: 1px solid #eee; 
-    transition: transform 0.3s ease;
-}
-.p-card:hover { transform: translateY(-5px); }
-.p-card img { 
-    width: 100%; 
-    height: 140px !important; /* Cố định chiều cao ảnh sản phẩm [cite: 2026-02-03] */
-    object-fit: contain; 
-    background: #f9f9f9; 
-    border-radius: 8px; 
-}
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 20px; }
+.p-card { background: #fff; padding: 15px; border-radius: 12px; text-align: center; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.p-card img { width: 100%; height: 140px !important; object-fit: contain; border-radius: 8px; background: #f9f9f9; }
 
-/* --- 6. NEON TECH HEADER (THU NHỎ) --- */
-.neon-header { 
-    background: #0d1117; 
-    padding: 20px; 
-    border-radius: 12px; 
-    text-align: center; 
-    border: 2px solid #00e5ff; 
-    box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); 
-    margin-bottom: 25px;
-}
-.neon-header h2 { 
-    color: #fff; 
-    font-size: 1.5em !important; 
-    text-shadow: 0 0 8px #00e5ff; 
-}
+/* --- NEON & MODAL --- */
+.neon-header { background: #0d1117; padding: 20px; border-radius: 15px; text-align: center; border: 2px solid #00e5ff; box-shadow: 0 0 15px rgba(0, 229, 255, 0.3); }
+.neon-header h2 { color: #fff; text-shadow: 0 0 10px #00e5ff; font-size: 1.5em; }
+.btn-order { background: #d32f2f !important; color: #fff !important; padding: 10px 15px; border-radius: 6px; display: block; font-weight: 900; text-decoration: none; margin-top: 10px; }
 
-/* --- 7. NÚT BẤM MUA NGAY --- */
-.btn-order, .btn-add { 
-    background: #d32f2f !important; 
-    color: #fff !important; 
-    padding: 10px 20px; 
-    border-radius: 6px; 
-    display: inline-block; 
-    font-weight: 900; 
-    font-size: 0.8em;
-    text-decoration: none !important; 
-    margin-top: 10px; 
-    box-shadow: 0 3px 8px rgba(211, 47, 47, 0.2);
-}
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10001; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+.modal-content { background: #121417; padding: 25px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; border: 2px solid #d32f2f; }
+.qr-frame img { width: 100%; max-width: 250px; border-radius: 10px; margin: 15px 0; }
+.messenger-btn { background: #0084ff; color: #fff; padding: 12px; display: block; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 15px; }
 
-/* --- 8. TỐI ƯU MOBILE [cite: 2026-02-03] --- */
+/* --- MOBILE RESPONSIVE --- */
 @media screen and (max-width: 768px) {
-    .full-banner { height: 200px !important; } /* Thu nhỏ banner trên điện thoại [cite: 2026-02-03] */
+    .full-banner { height: 200px !important; }
     .trust-container .inner { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; } /* Hiện 2 cột trên mobile cho gọn [cite: 2026-02-03] */
-    .p-card { padding: 10px; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .p-card img { height: 110px !important; }
-    .neon-header h2 { font-size: 1.2em !important; }
-    .mobile-only { display: block !important; background: #d32f2f; color: #fff; padding: 8px; text-align: center; font-weight: 900; cursor: pointer; border-radius: 4px; margin: 10px auto; width: 90px; }
-    .nav-links { display: none; flex-direction: column; background: #d32f2f; }
+    .nav-links { display: none; flex-direction: column; background: #d32f2f; width: 100%; }
     .nav-links.active { display: flex; }
+    .mobile-only { display: block !important; color: #d32f2f; cursor: pointer; font-weight: 900; padding: 10px; }
 }
 .mobile-only { display: none; }
