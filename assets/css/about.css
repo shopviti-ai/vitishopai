@@ -1,33 +1,19 @@
-/* --- HỆ THỐNG MENU & CẤU TRÚC CHUNG --- */
-#menu { display: none; }
-body.is-menu-visible #menu { display: block; }
+/* --- CSS TRANG GIỚI THIỆU CHUYÊN NGHIỆP  --- */
 
-.about-container {
-    padding: 60px 0 !important;
-    background-color: #ffffff;
-}
-
-.about-container .inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* --- HERO SECTION & AVATAR (250px) --- */
 .about-hero {
     text-align: center;
-    padding: 50px 0 40px;
+    padding: 60px 0 40px;
 }
 
+/* Avatar chuẩn 250px */
 .profile-frame {
-    width: 250px; 
+    width: 250px;
     height: 250px;
     margin: 0 auto 25px;
     border-radius: 50%;
     border: 5px solid #d32f2f;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(211, 47, 47, 0.3);
-    background-color: #f0f0f0;
 }
 
 .profile-frame img {
@@ -40,7 +26,6 @@ body.is-menu-visible #menu { display: block; }
     font-size: 3rem !important;
     font-weight: 900;
     color: #333;
-    margin: 0;
 }
 
 .subtitle {
@@ -50,27 +35,23 @@ body.is-menu-visible #menu { display: block; }
     margin-top: 10px;
 }
 
-/* --- ĐIỀU HƯỚNG & NÚT QUAY LẠI --- */
+/* Nút quay lại  */
 .btn-back-home {
-    display: inline-flex;
-    align-items: center;
     text-decoration: none !important;
     color: #d32f2f !important;
     font-weight: 700;
-    font-size: 0.9em;
-    padding: 10px 15px;
+    padding: 10px 20px;
     border: 2px solid #d32f2f;
     border-radius: 50px;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .btn-back-home:hover {
     background: #d32f2f;
     color: #fff !important;
-    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
 }
 
-/* --- NỘI DUNG VĂN BẢN & KỸ NĂNG --- */
+/* Bố cục nội dung chính */
 .about-content-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -78,84 +59,90 @@ body.is-menu-visible #menu { display: block; }
     margin: 40px 0;
 }
 
+.red-title {
+    color: #d32f2f !important;
+    font-size: 1.8rem !important;
+    font-weight: 900;
+    border-left: 6px solid #d32f2f;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
 .bio-section p {
     font-size: 1.2rem !important;
     line-height: 1.9;
-    margin-bottom: 20px;
     color: #444;
     text-align: justify;
 }
 
 .skill-list { list-style: none; padding: 0; }
 .skill-list li {
-    background: #fff;
+    background: #fdfcf0;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    display: flex;
-    align-items: center;
     font-weight: 700;
-    color: #333;
-    transition: 0.3s;
-}
-
-.skill-list li:hover { transform: translateX(10px); }
-.skill-list i {
-    color: #d32f2f;
-    margin-right: 15px;
-    font-size: 1.3em;
-    width: 25px;
-    text-align: center;
-}
-
-/* --- TIMELINE KINH NGHIỆM CHI TIẾT --- */
-.experience-section { margin: 60px 0; }
-.section-title {
-    color: #d32f2f;
-    font-size: 1.8rem !important;
-    font-weight: 900;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-}
-
-.timeline { border-left: 3px solid #d32f2f; padding-left: 30px; position: relative; }
-.timeline-item { margin-bottom: 40px; position: relative; }
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -41.5px;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    background: #d32f2f;
-    border-radius: 50%;
-    border: 4px solid #fff;
-}
-
-.time-tag { font-weight: 900; color: #d32f2f; font-size: 0.9em; margin-bottom: 8px; }
-.exp-box {
-    background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     border: 1px solid #eee;
 }
 
-.exp-box h4 { margin-bottom: 10px; color: #333; font-size: 1.2em; font-weight: 800; }
+/* Lưới kinh nghiệm 2 cột cân đối  */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
 
-/* Khối nổi bật cho Xã Phường */
-.highlight-item .exp-box { border: 2px solid #00ff95; background: #f0fff4; }
+.exp-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
 
-/* --- TIN CẬY ĐỊA PHƯƠNG --- */
+.time-tag {
+    color: #d32f2f;
+    font-weight: 900;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.exp-card h4 {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 800;
+}
+
+.exp-card p {
+    font-size: 1.05rem !important;
+    line-height: 1.7;
+    color: #555;
+}
+
+.highlight-card {
+    border: 2px solid #00ff95;
+    background: #f0fff4;
+}
+
+.slogan-note {
+    margin-top: 15px !important;
+    font-weight: 900;
+    color: #d32f2f !important;
+    font-style: italic;
+}
+
+/* Địa phương  */
 .local-trust {
     background: #0d1117;
     color: #fff;
     padding: 50px;
     border-radius: 25px;
     text-align: center;
-    margin-top: 60px;
+    margin: 40px 0;
 }
 
 .coffee-card {
@@ -163,15 +150,12 @@ body.is-menu-visible #menu { display: block; }
     padding: 25px;
     display: inline-block;
     border-radius: 15px;
-    margin-top: 25px;
 }
 
-.coffee-card h4 { color: #00ff95; margin-bottom: 10px; font-size: 1.3em; }
-
-/* --- RESPONSIVE --- */
-@media screen and (max-width: 768px) {
-    .about-content-grid { grid-template-columns: 1fr; }
-    .timeline { padding-left: 20px; }
+/* Mobile  */
+@media screen and (max-width: 850px) {
+    .about-content-grid, .experience-grid {
+        grid-template-columns: 1fr;
+    }
     .profile-frame { width: 180px; height: 180px; }
-    .name-highlight { font-size: 2rem !important; }
 }
