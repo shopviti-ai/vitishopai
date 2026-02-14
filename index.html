@@ -118,8 +118,84 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <canvas id="fireworksCanvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;"></canvas>
+
+<script>
+    const canvas = document.getElementById('fireworksCanvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+        constructor(x, y, color) {
+            this.x = x;
+            this.y = y;
+            this.color = color;
+            this.velocity = {
+                x: (Math.random() - 0.5) * 8,
+                y: (Math.random() - 0.5) * 8
+            };
+            this.alpha = 1;
+            this.friction = 0.95;
+        }
+
+        draw() {
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+        }
+
+        update() {
+            this.velocity.x *= this.friction;
+            this.velocity.y *= this.friction;
+            this.x += this.velocity.x;
+            this.y += this.velocity.y;
+            this.alpha -= 0.01;
+        }
+    }
+
+    function createFirework() {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height * 0.5;
+        const colors = ['#ff0000', '#ffd700', '#ffffff', '#ff4500'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        
+        for (let i = 0; i < 30; i++) {
+            particles.push(new Particle(x, y, color));
+        }
+    }
+
+    function animate() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach((p, i) => {
+            if (p.alpha > 0) {
+                p.update();
+                p.draw();
+            } else {
+                particles.splice(i, 1);
+            }
+        });
+
+        if (Math.random() < 0.05) createFirework();
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+</script>
 </body>
 </html>
+
 
 
 
