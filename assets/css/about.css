@@ -220,3 +220,52 @@
         font-size: 2.5rem !important;
     }
 }
+
+/* --- CSS CHO NÚT ZALO CHUYÊN NGHIỆP --- */
+
+.btn-zalo-contact {
+    display: inline-block;
+    background: #0068ff !important; /* Màu xanh Zalo chuẩn */
+    color: #ffffff !important;
+    padding: 12px 30px;
+    border-radius: 50px; /* Bo tròn kiểu viên thuốc */
+    font-weight: 900;
+    font-size: 1rem;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.3); /* Tạo độ nổi cho nút */
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-zalo-contact:hover {
+    background: #0056d2 !important; /* Màu đậm hơn khi di chuột vào */
+    transform: translateY(-3px); /* Hiệu ứng nhích nhẹ lên trên */
+    box-shadow: 0 8px 25px rgba(0, 104, 255, 0.5);
+}
+
+/* Điều chỉnh lại khung chứa để nút nằm cân đối */
+.coffee-card-horizontal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    border-left: 8px solid #d32f2f;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Mobile: Tự động đưa nút xuống dưới và dãn 100% */
+@media screen and (max-width: 768px) {
+    .coffee-card-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .btn-zalo-contact {
+        width: 100%;
+        text-align: center;
+    }
+}
