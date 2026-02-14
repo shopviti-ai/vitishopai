@@ -27,7 +27,7 @@ body { font-family: 'Inter', sans-serif !important; background: #fdfcf0; margin:
 .p-card h3 { font-size: 1.1em; margin: 10px 0; font-weight: 700; }
 .p-price { color: #666; font-weight: 700; margin-bottom: 15px; }
 
-/* --- 5. NÚT "TƯ VẤN NGAY" NEON ĐỎ (MỚI) [cite: 2026-02-14] --- */
+/* --- 5. NÚT "TƯ VẤN NGAY" NEON ĐỎ (MỚI) ] --- */
 .btn-order {
     background: #d32f2f !important;
     color: #fff !important;
@@ -54,7 +54,7 @@ body { font-family: 'Inter', sans-serif !important; background: #fdfcf0; margin:
 .verified-badge { display: inline-flex; align-items: center; background: rgba(0, 229, 255, 0.1); padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(0, 229, 255, 0.3); color: #e0e0e0; margin-top: 15px; font-size: 0.9em; }
 .verified-badge i { color: #00ff95; margin-right: 8px; }
 
-/* --- 7. MODAL LIÊN HỆ (CÓ NÚT ĐÓNG RÕ RÀNG) [cite: 2026-02-14] --- */
+/* --- 7. MODAL LIÊN HỆ (CÓ NÚT ĐÓNG RÕ RÀNG) ] --- */
 .modal-overlay {
     display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0, 0, 0, 0.85); /* Nền tối vừa phải */
@@ -65,7 +65,7 @@ body { font-family: 'Inter', sans-serif !important; background: #fdfcf0; margin:
     background: #121417; padding: 35px; border-radius: 25px; width: 90%; max-width: 400px; text-align: center;
     border: 2px solid #d32f2f; box-shadow: 0 0 30px rgba(211, 47, 47, 0.5); position: relative;
 }
-/* Nút đóng (X) to và rõ [cite: 2026-02-14] */
+/* Nút đóng (X) to và rõ ] */
 .close-modal {
     position: absolute; top: 15px; right: 20px; font-size: 30px; color: #fff;
     cursor: pointer; transition: 0.3s; z-index: 10002;
