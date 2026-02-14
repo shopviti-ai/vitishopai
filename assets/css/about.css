@@ -123,6 +123,8 @@ body.is-menu-visible #menu { display: block; }
 }
 /* --- CSS CHO TRANG GIỚI THIỆU --- */
 
+/* --- CSS CHO TRANG GIỚI THIỆU --- */
+
 /* Nút quay lại trang chủ */
 .btn-back-home {
     display: inline-flex;
@@ -154,21 +156,22 @@ body.is-menu-visible #menu { display: block; }
     padding: 50px 0 40px;
 }
 
+/* --- CẬP NHẬT KÍCH THƯỚC ẢNH ĐẠI DIỆN TẠI ĐÂY --- */
 .profile-frame {
-    width: 180px;
-    height: 180px;
+    width: 250px;  /* Tăng từ 180px lên 250px */
+    height: 250px; /* Tăng từ 180px lên 250px */
     margin: 0 auto 25px;
     border-radius: 50%;
     border: 5px solid #d32f2f;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(211, 47, 47, 0.2);
-    background-color: #f0f0f0; /* Màu nền chờ khi chưa có ảnh */
+    background-color: #f0f0f0;
 }
 
 .profile-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh phủ kín khung tròn */
+    object-fit: cover;
 }
 
 .subtitle {
@@ -229,8 +232,8 @@ body.is-menu-visible #menu { display: block; }
         grid-template-columns: 1fr;
     }
     .profile-frame {
-        width: 150px;
-        height: 150px;
+        width: 180px; /* Tăng kích thước trên mobile */
+        height: 180px; /* Tăng kích thước trên mobile */
     }
     .top-bar {
         text-align: left;
