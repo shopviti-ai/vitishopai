@@ -51,7 +51,7 @@ body { font-family: 'Inter', sans-serif !important; background: #fdfcf0; margin:
 /* --- 6. NEON HEADER --- */
 .neon-header { background: #0d1117; padding: 25px; border-radius: 15px; text-align: center; border: 2px solid #00e5ff; box-shadow: 0 0 20px rgba(0, 229, 255, 0.3); margin-bottom: 30px; }
 .neon-header h2 { color: #fff; text-shadow: 0 0 10px #00e5ff; font-size: 1.8em; text-transform: uppercase; margin: 0; }
-.verified-badge { display: inline-flex; align-items: center; background: rgba(0, 229, 255, 0.1); padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(0, 229, 255, 0.3); color: #e0e0e0; margin-top: 15px; font-size: 0.9em; }
+.verified-badge { display: inline-flex; align-items: center; background: rgba(0, 229, 255, 0.1); padding: 8px 20px; border-radius: 30px; border: 1px solid rgba(0, 229, 255, 0.3); color: #e0e0e0; margin-top: 15px; font-size: 1.9em; }
 .verified-badge i { color: #00ff95; margin-right: 8px; }
 
 /* --- 7. MODAL LIÊN HỆ (CÓ NÚT ĐÓNG RÕ RÀNG) ] --- */
