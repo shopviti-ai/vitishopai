@@ -1,9 +1,8 @@
 $(document).ready(function() {
-    // 1. Mở Modal khi nhấn Mua Ngay
+    // 1. Mở Modal khi nhấn Tư vấn [cite: 2026-02-14]
     $(document).on('click', '.btn-order', function() {
         const name = $(this).data('name');
-        const price = $(this).data('price');
-        $('#order-details').html(`Đang chọn: <strong>${name}</strong> (${price})`);
+        $('#order-details').html(`Sản phẩm quan tâm: <br>${name}`);
         $('#order-modal').fadeIn().css('display', 'flex');
     });
 
@@ -13,13 +12,8 @@ $(document).ready(function() {
     // 3. Toggle Menu Mobile
     $('#mobile-menu-btn').on('click', function() { $('.nav-links').toggleClass('active'); });
 
-    // 4. Gửi Messenger
-    $('#btn-send-messenger').on('click', function() {
-        const info = $('#order-details').text();
-        const msg = `CHÀO VĨNH TÍN AI! TÔI MUỐN MUA:\n${info}\nVui lòng tư vấn giúp tôi!`;
-        navigator.clipboard.writeText(msg).then(() => {
-            alert("Đã sao chép nội dung đơn hàng!");
-            window.open("https://m.me/cafeep276", "_blank"); 
-        });
+    // 4. Tự động đóng modal sau khi khách chọn liên hệ [cite: 2026-02-14]
+    $('.contact-buttons a').on('click', function() {
+        setTimeout(() => { $('#order-modal').fadeOut(); }, 1000);
     });
 });
