@@ -82,3 +82,39 @@
     .product-title { font-size: 1.6em; }
     .product-image-wrapper img { max-height: 250px; }
 }
+/* --- NÚT QUAY LẠI (BACK BUTTON)  --- */
+.back-nav {
+    padding: 20px 0 10px 0;
+    text-align: left;
+}
+
+.btn-back {
+    text-decoration: none !important;
+    color: #d32f2f !important; /* Màu đỏ thương hiệu của Tín */
+    font-weight: 900;
+    font-size: 0.9em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border: 2px solid #d32f2f;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-back i {
+    font-size: 1.1em;
+}
+
+.btn-back:hover {
+    background: #d32f2f;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+    transform: translateX(-5px); /* Hiệu ứng nhích nhẹ sang trái  */
+}
+
+/* Tối ưu cho Mobile  */
+@media screen and (max-width: 768px) {
+    .back-nav { padding-left: 15px; }
+    .btn-back { font-size: 0.8em; }
+}
