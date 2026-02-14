@@ -81,4 +81,98 @@ body.is-menu-visible #menu { display: block; }
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.85rem;
+
+}
+/* --- PHONG CÁCH TRANG GIỚI THIỆU CÁ NHÂN [cite: 2026-02-14] --- */
+
+.about-hero {
+    text-align: center;
+    padding: 60px 0 40px;
+    background: linear-gradient(180deg, #fff 0%, #fdfcf0 100%);
+}
+
+.profile-frame {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 5px solid #d32f2f;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.2);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.bio-section p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #333;
+}
+
+.skill-list i {
+    color: #d32f2f;
+    margin-right: 15px;
+    font-size: 1.3em;
+}
+
+/* KHỐI TIN CẬY ĐỊA PHƯƠNG */
+.local-trust {
+    background: #0d1117;
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.coffee-card {
+    border: 2px dashed #d32f2f;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.coffee-card h4 { color: #00ff95; margin-bottom: 10px; }
+
+/* Responsive [cite: 2026-02-14] */
+@media screen and (max-width: 768px) {
+    .about-content-grid { grid-template-columns: 1fr; }
+    .profile-frame { width: 150px; height: 150px; }
 }
