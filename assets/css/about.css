@@ -35,127 +35,215 @@
     margin-top: 10px;
 }
 
-/* Nút quay lại  */
+/* --- CSS TRANG GIỚI THIỆU CHUYÊN NGHIỆP --- */
+
+/* Nút quay lại */
 .btn-back-home {
+    display: inline-block;
     text-decoration: none !important;
     color: #d32f2f !important;
-    font-weight: 700;
-    padding: 10px 20px;
+    font-weight: 900;
+    padding: 12px 25px;
     border: 2px solid #d32f2f;
     border-radius: 50px;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .btn-back-home:hover {
     background: #d32f2f;
     color: #fff !important;
+    box-shadow: 0 6px 15px rgba(211, 47, 47, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Phần Hero và Ảnh đại diện */
+.about-hero {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+/* --- CẬP NHẬT KHUNG ẢNH MỚI (RÕ HƠN) --- */
+.profile-frame {
+    width: 300px;  /* Tăng kích thước lên 300px */
+    height: 300px; /* Giữ tỉ lệ vuông */
+    margin: 0 auto 30px;
+    border-radius: 25px; /* Bo góc mềm mại thay vì tròn hoàn toàn */
+    border: 4px solid #d32f2f; /* Viền đỏ điểm nhấn */
+    overflow: hidden;
+    /* Hiệu ứng đổ bóng chuyên nghiệp hơn */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng khi di chuột vào ảnh */
+.profile-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(211, 47, 47, 0.2);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh phủ kín khung */
+}
+
+.name-highlight {
+    font-size: 3.2rem !important;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem !important;
+    color: #d32f2f;
+    font-weight: 700;
+    margin-top: 0;
 }
 
 /* Bố cục nội dung chính */
 .about-content-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 40px;
-    margin: 40px 0;
+    gap: 50px;
+    margin: 50px 0;
+    align-items: start;
 }
 
 .red-title {
     color: #d32f2f !important;
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
     font-weight: 900;
-    border-left: 6px solid #d32f2f;
-    padding-left: 15px;
     margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.red-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background: #d32f2f;
+    border-radius: 2px;
 }
 
 .bio-section p {
-    font-size: 1.2rem !important;
-    line-height: 1.9;
+    font-size: 1.25rem !important;
+    line-height: 1.8;
     color: #444;
     text-align: justify;
+    margin-bottom: 25px;
 }
 
 .skill-list { list-style: none; padding: 0; }
 .skill-list li {
-    background: #fdfcf0;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 12px;
+    background: #fff;
+    padding: 18px 25px;
+    margin-bottom: 12px;
+    border-radius: 15px;
     font-weight: 700;
+    font-size: 1.1rem;
     border: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
 }
 
-/* Lưới kinh nghiệm 2 cột cân đối  */
+.skill-list li:hover {
+    transform: translateX(5px);
+    border-color: #d32f2f;
+    color: #d32f2f;
+}
+
+/* Lưới kinh nghiệm */
 .experience-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .exp-card {
     background: #fff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    border: 1px solid #eee;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border-color: #eee;
 }
 
 .time-tag {
+    display: inline-block;
+    background: #ffebee;
     color: #d32f2f;
-    font-weight: 900;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    padding: 6px 15px;
+    border-radius: 30px;
+    margin-bottom: 20px;
 }
 
 .exp-card h4 {
-    font-size: 1.3rem !important;
-    margin-bottom: 12px;
-    color: #333;
+    font-size: 1.4rem !important;
+    margin-bottom: 15px;
+    color: #222;
     font-weight: 800;
+    line-height: 1.4;
 }
 
 .exp-card p {
-    font-size: 1.05rem !important;
+    font-size: 1.1rem !important;
     line-height: 1.7;
     color: #555;
+    flex-grow: 1;
 }
 
 .highlight-card {
-    border: 2px solid #00ff95;
-    background: #f0fff4;
+    border: 2px solid #d32f2f;
+    background: #fffafa;
+}
+
+.highlight-card .time-tag {
+    background: #d32f2f;
+    color: #fff;
 }
 
 .slogan-note {
-    margin-top: 15px !important;
-    font-weight: 900;
+    margin-top: 20px !important;
+    font-weight: 800;
     color: #d32f2f !important;
+    font-size: 1.2rem;
+    text-align: center;
     font-style: italic;
 }
 
-/* Địa phương  */
-.local-trust {
-    background: #0d1117;
-    color: #fff;
-    padding: 50px;
-    border-radius: 25px;
+/* Footer */
+#footer {
+    background: #1a1a1a;
+    padding: 40px 0;
     text-align: center;
-    margin: 40px 0;
+    color: #888;
+    margin-top: 60px;
 }
 
-.coffee-card {
-    border: 2px dashed #d32f2f;
-    padding: 25px;
-    display: inline-block;
-    border-radius: 15px;
-}
-
-/* Mobile  */
+/* Responsive */
 @media screen and (max-width: 850px) {
-    .about-content-grid, .experience-grid {
-        grid-template-columns: 1fr;
-    }
-    .profile-frame { width: 180px; height: 180px; }
+    .about-content-grid { grid-template-columns: 1fr; gap: 30px; }
+    .profile-frame { width: 220px; height: 220px; }
+    .name-highlight { font-size: 2.5rem !important; }
+    .exp-card { padding: 25px; }
 }
