@@ -1,19 +1,47 @@
-/* --- CSS TRANG GIỚI THIỆU CHUYÊN NGHIỆP  --- */
+/* --- HỆ THỐNG GIAO DIỆN VĨNH TÍN AI  --- */
 
-.about-hero {
-    text-align: center;
-    padding: 60px 0 40px;
+/* Cấu trúc khung chứa  */
+.inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
-/* Avatar chuẩn 250px */
+/* Nút quay lại trang chủ  */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    color: #d32f2f !important;
+    font-weight: 900;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: 2px solid #d32f2f;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin: 20px 0;
+}
+
+.btn-back-home:hover {
+    background: #d32f2f;
+    color: #fff !important;
+}
+
+/* PHẦN HERO: Chân dung và Tên  */
+.about-hero {
+    text-align: center;
+    padding: 40px 0;
+}
+
 .profile-frame {
-    width: 250px;
+    width: 250px; /* Kích thước Tín chọn  */
     height: 250px;
     margin: 0 auto 25px;
     border-radius: 50%;
-    border: 5px solid #d32f2f;
+    border: 6px solid #d32f2f;
     overflow: hidden;
-    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.3);
+    box-shadow: 0 10px 30px rgba(211, 47, 47, 0.2);
 }
 
 .profile-frame img {
@@ -23,227 +51,172 @@
 }
 
 .name-highlight {
-    font-size: 3rem !important;
+    font-size: 3.5rem !important;
     font-weight: 900;
     color: #333;
-}
-
-.subtitle {
-    font-size: 1.4rem !important;
-    color: #d32f2f;
-    font-weight: 700;
-    margin-top: 10px;
-}
-
-/* --- CSS TRANG GIỚI THIỆU CHUYÊN NGHIỆP --- */
-
-/* Nút quay lại */
-.btn-back-home {
-    display: inline-block;
-    text-decoration: none !important;
-    color: #d32f2f !important;
-    font-weight: 900;
-    padding: 12px 25px;
-    border: 2px solid #d32f2f;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    background: #fff;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-.btn-back-home:hover {
-    background: #d32f2f;
-    color: #fff !important;
-    box-shadow: 0 6px 15px rgba(211, 47, 47, 0.25);
-    transform: translateY(-2px);
-}
-
-/* Phần Hero và Ảnh đại diện */
-.about-hero {
-    text-align: center;
-    padding: 60px 0 40px;
-}
-
-/* --- CẬP NHẬT KHUNG ẢNH MỚI (RÕ HƠN) --- */
-.profile-frame {
-    width: 300px;  /* Tăng kích thước lên 300px */
-    height: 300px; /* Giữ tỉ lệ vuông */
-    margin: 0 auto 30px;
-    border-radius: 25px; /* Bo góc mềm mại thay vì tròn hoàn toàn */
-    border: 4px solid #d32f2f; /* Viền đỏ điểm nhấn */
-    overflow: hidden;
-    /* Hiệu ứng đổ bóng chuyên nghiệp hơn */
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-
-/* Hiệu ứng khi di chuột vào ảnh */
-.profile-frame:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 25px 50px rgba(211, 47, 47, 0.2);
-}
-
-.profile-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh phủ kín khung */
-}
-
-.name-highlight {
-    font-size: 3.2rem !important;
-    font-weight: 900;
-    color: #333;
-    margin-bottom: 10px;
+    margin: 0;
 }
 
 .subtitle {
     font-size: 1.5rem !important;
     color: #d32f2f;
     font-weight: 700;
-    margin-top: 0;
+    margin-top: 5px;
 }
 
-/* Bố cục nội dung chính */
+/* TIÊU ĐỀ VIỀN ĐỎ (STYLE CỦA TÍN)  */
+.red-title {
+    color: #d32f2f !cite;
+    font-size: 2rem !important;
+    font-weight: 900;
+    border-left: 8px solid #d32f2f;
+    padding-left: 15px;
+    margin: 40px 0 25px 0;
+    text-transform: uppercase;
+}
+
+/* BỐ CỤC NỘI DUNG VÀ KỸ NĂNG  */
 .about-content-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 50px;
-    margin: 50px 0;
-    align-items: start;
-}
-
-.red-title {
-    color: #d32f2f !important;
-    font-size: 2rem !important;
-    font-weight: 900;
-    margin-bottom: 25px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.red-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 60px;
-    height: 4px;
-    background: #d32f2f;
-    border-radius: 2px;
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
 .bio-section p {
-    font-size: 1.25rem !important;
-    line-height: 1.8;
+    font-size: 1.3rem !important; /* Chữ to rõ  */
+    line-height: 1.9;
     color: #444;
     text-align: justify;
-    margin-bottom: 25px;
 }
 
-.skill-list { list-style: none; padding: 0; }
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
 .skill-list li {
-    background: #fff;
-    padding: 18px 25px;
+    background: #fdfcf0;
+    padding: 18px;
     margin-bottom: 12px;
-    border-radius: 15px;
+    border-radius: 12px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border: 1px solid #eee;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-    display: flex;
-    align-items: center;
-    transition: 0.3s;
+    color: #333;
 }
 
-.skill-list li:hover {
-    transform: translateX(5px);
-    border-color: #d32f2f;
-    color: #d32f2f;
-}
-
-/* Lưới kinh nghiệm */
+/* LƯỚI KINH NGHIỆM 2 CỘT  */
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .exp-card {
     background: #fff;
-    padding: 35px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    border: 1px solid #f0f0f0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
     display: flex;
     flex-direction: column;
-    transition: all 0.3s ease;
-}
-
-.exp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-    border-color: #eee;
 }
 
 .time-tag {
-    display: inline-block;
-    background: #ffebee;
     color: #d32f2f;
-    font-weight: 800;
-    font-size: 0.9rem;
-    padding: 6px 15px;
-    border-radius: 30px;
-    margin-bottom: 20px;
+    font-weight: 900;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 .exp-card h4 {
     font-size: 1.4rem !important;
+    font-weight: 800;
     margin-bottom: 15px;
     color: #222;
-    font-weight: 800;
-    line-height: 1.4;
 }
 
 .exp-card p {
     font-size: 1.1rem !important;
     line-height: 1.7;
     color: #555;
-    flex-grow: 1;
 }
 
+/* Thẻ nổi bật cho đối tác  */
 .highlight-card {
-    border: 2px solid #d32f2f;
-    background: #fffafa;
-}
-
-.highlight-card .time-tag {
-    background: #d32f2f;
-    color: #fff;
+    border: 3px solid #00ff95;
+    background: #f0fff4;
 }
 
 .slogan-note {
-    margin-top: 20px !important;
-    font-weight: 800;
+    margin-top: 15px !important;
+    font-weight: 900;
     color: #d32f2f !important;
-    font-size: 1.2rem;
-    text-align: center;
     font-style: italic;
 }
 
-/* Footer */
-#footer {
-    background: #1a1a1a;
-    padding: 40px 0;
-    text-align: center;
-    color: #888;
-    margin-top: 60px;
+/* FIX LỖI PHẦN KẾT NỐI TRỰC TIẾP  */
+.local-trust-fixed {
+    clear: both;
+    margin: 80px 0 40px 0;
+    width: 100%;
 }
 
-/* Responsive */
+.coffee-card-horizontal {
+    background: #fff;
+    border: 2px solid #eee;
+    border-left: 10px solid #d32f2f;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.coffee-info h4 {
+    color: #d32f2f;
+    font-size: 1.8rem !important;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.coffee-info p {
+    margin: 8px 0 !important;
+    font-size: 1.2rem !important;
+    color: #555;
+}
+
+.btn-zalo-contact {
+    background: #0068ff;
+    color: #fff !important;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1.1rem;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.btn-zalo-contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 104, 255, 0.3);
+}
+
+/* Tối ưu cho Mobile  */
 @media screen and (max-width: 850px) {
-    .about-content-grid { grid-template-columns: 1fr; gap: 30px; }
-    .profile-frame { width: 220px; height: 220px; }
-    .name-highlight { font-size: 2.5rem !important; }
-    .exp-card { padding: 25px; }
+    .about-content-grid, .experience-grid {
+        grid-template-columns: 1fr;
+    }
+    .coffee-card-horizontal {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+    .name-highlight {
+        font-size: 2.5rem !important;
+    }
 }
