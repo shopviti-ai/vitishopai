@@ -121,3 +121,119 @@ body.is-menu-visible #menu { display: block; }
     .about-content-grid { grid-template-columns: 1fr; }
     .timeline { padding-left: 20px; }
 }
+/* --- CSS CHO TRANG GIỚI THIỆU --- */
+
+/* Nút quay lại trang chủ */
+.btn-back-home {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none !important;
+    color: #d32f2f !important; /* Màu đỏ thương hiệu */
+    font-weight: 700;
+    font-size: 0.9em;
+    padding: 10px 15px;
+    border: 2px solid #d32f2f;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-back-home i {
+    margin-right: 8px;
+}
+
+.btn-back-home:hover {
+    background: #d32f2f;
+    color: #fff !important;
+    box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+/* Phần Hero và Ảnh đại diện */
+.about-hero {
+    text-align: center;
+    padding: 50px 0 40px;
+}
+
+.profile-frame {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 5px solid #d32f2f;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(211, 47, 47, 0.2);
+    background-color: #f0f0f0; /* Màu nền chờ khi chưa có ảnh */
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh phủ kín khung tròn */
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* Lưới nội dung và các phần khác */
+.about-content-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.bio-section p {
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #333;
+    transition: 0.3s;
+}
+
+.skill-list li:hover {
+    transform: translateX(10px);
+}
+
+.skill-list i {
+    color: #d32f2f;
+    margin-right: 15px;
+    font-size: 1.3em;
+    width: 25px;
+    text-align: center;
+}
+
+/* Responsive cho mobile */
+@media screen and (max-width: 768px) {
+    .about-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .profile-frame {
+        width: 150px;
+        height: 150px;
+    }
+    .top-bar {
+        text-align: left;
+        padding-left: 15px;
+    }
+}
